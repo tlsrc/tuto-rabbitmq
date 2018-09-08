@@ -10,9 +10,6 @@ channel.queue_declare(queue='work-queue', durable=True)
 #make queue persistent, needs to be set for every component connecting to the queue
 #queue must be deleted if not created correctly
 
-channel.basic_qos(prefetch_count=1) 
-# do not give more workers than 1 message at a time
-
 message = ' '.join(sys.argv[1:]) or 'Hello World!'
 channel.basic_publish(exchange='',
                         routing_key='work-queue',
