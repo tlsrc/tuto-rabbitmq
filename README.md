@@ -36,7 +36,7 @@ Queues, exchanges and bindings are referred to AMQP entities.
 ### Exchange types
 
 1. Direct exchange : delivers messages to bounded queues if the routing key from the message matches the one from the queue. The default exchange is direct and automatically creates the corresponding queue (useful for simple cases)
-2. Fanout exchange : delivers messages to all queues that are bound to it (useful for broad pub/sub)
+2. Fanout exchange : delivers messages to all queues that are bound to it (useful for broadcasting)
 3. Topic exchange : delivers messages to one or many queues based on matching the message routing key and the queue routing pattern (useful for targeted pub/sub)
 4. Headers exchange : delivers messages based on messages headers and queue binding headers (for more advanced use cases that cannot rely only on a routing key)
 
